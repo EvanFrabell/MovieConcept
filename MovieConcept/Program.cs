@@ -1,5 +1,11 @@
+
+using GraphiQl;
+using GraphQL;
+using GraphQL.MicrosoftDI;
+using GraphQL.Types;
 using Microsoft.EntityFrameworkCore;
 using MovieConcept;
+using MovieConcept.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +20,9 @@ builder.Services.AddDbContext<imdbOriginalContext>(options =>
 
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+builder.Services.AddGraphQLServer().AddQueryType<Query>().AddProjections().AddFiltering().AddSorting();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -42,5 +50,7 @@ app.UseCors("AllowAll");
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapGraphQL("/graphql");
 
 app.Run();

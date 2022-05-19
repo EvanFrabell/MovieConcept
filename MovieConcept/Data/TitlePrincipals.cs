@@ -20,6 +20,7 @@ namespace MovieConcept
         public string Tconstt { get; set; }
 
         [Column("ordering")]
+        [UseSorting]
         public int Ordering { get; set; }
 
         [ForeignKey("NameBasics")]
