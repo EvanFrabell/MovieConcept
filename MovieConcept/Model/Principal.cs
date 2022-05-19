@@ -19,15 +19,17 @@ namespace MovieConcept.Model
         [Column("ordering")]
         public int Ordering { get; set; }
 
-        //[ForeignKey("Bio")]
+        [ForeignKey("Bio")]
         [Column("nconst")]
-        [StringLength(50)]
         public string Nconst { get; set; }
+        public Bio Bio { get; set; }
 
         [Column("category")]
         public string Category { get; set; }
 
-        public ICollection<Bio> Bio { get; set; }
+
+
+
 
     }
 }

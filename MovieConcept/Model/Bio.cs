@@ -3,13 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MovieConcept.Model
 {
+    [Table("name.basics")]
     public class Bio
     {
-        [Key, ForeignKey("Principal")]
+        [Key]
         [Column("nconst")]
         [StringLength(50)]
         public string NameId { get; set; }
-        public Principal Principal { get; set; }
 
         [Column("primaryName")]
         public string PrimaryName { get; set; }
@@ -19,5 +19,9 @@ namespace MovieConcept.Model
         public int DeathYear { get; set; }
         [Column("primaryProfession")]
         public string PrimaryProfession { get; set; }
+
+        public ICollection<Principal> Principals { get; set; }
+
+       
     }
 }
