@@ -15,7 +15,8 @@ var connectionString = builder.Configuration.GetConnectionString("ConceptDBConne
 builder.Services.AddDbContext<imdbOriginalContext>(options =>
 
 {
-    options.UseLazyLoadingProxies().UseSqlServer(connectionString);
+    options.UseSqlServer(connectionString);
+    //options.UseLazyLoadingProxies().UseSqlServer(connectionString);
 });
 
 

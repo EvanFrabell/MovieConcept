@@ -20,6 +20,7 @@ namespace MovieConcept
         }
 
         public virtual DbSet<MovieTitle> MovieTitles { get; set; }
+        public virtual DbSet<Principal> Principals { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
