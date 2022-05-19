@@ -3,12 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MovieConcept.Model
 {
-    [Table("titles.ratings")]
+    [Table("title.ratings")]
     public class Rating
     {
-        [Key]
+        [Key, ForeignKey("MovieTitle")]
         [Column("tconst")]
         public string Tconstr { get; set; }
+        public MovieTitle MovieTitle { get; set; }
 
         [Column("averageRating")]
         public double? AverageRating { get; set; }

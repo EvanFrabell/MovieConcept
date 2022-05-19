@@ -10,6 +10,7 @@ namespace MovieConcept.Model
         [Column("tconst")]
         [StringLength(50)]
         public string Tconst { get; set; }
+        public Rating Ratings { get; set; }
         
         [Column("titleType")]
         public string TitleType { get; set; }
