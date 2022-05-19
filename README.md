@@ -29,6 +29,9 @@
 
 
 ### Quick Queries to Run in GraphQL 
+
+# Quick Queries to Run in GraphQL 
+
  query {
   allMovies {
     tconst,
