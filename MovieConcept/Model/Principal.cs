@@ -13,15 +13,13 @@ namespace MovieConcept.Model
 
         [ForeignKey("MovieTitle")]
         [Column("tconst")]
-        [StringLength(50)]
-        public string Tconstt { get; set; }
+        public string Tid { get; set; }
         public MovieTitle MovieTitle { get; set; }
 
         [Column("ordering")]
-        [UseSorting]
         public int Ordering { get; set; }
 
-        //[ForeignKey("NameBasics")]
+        //[ForeignKey("Bio")]
         [Column("nconst")]
         [StringLength(50)]
         public string Nconst { get; set; }
@@ -29,6 +27,7 @@ namespace MovieConcept.Model
         [Column("category")]
         public string Category { get; set; }
 
-       
+        public ICollection<Bio> Bio { get; set; }
+
     }
 }

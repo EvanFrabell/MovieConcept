@@ -29,7 +29,9 @@ namespace MovieConcept.Model
         [Column("genres")]
         public string Genres { get; set; }
 
-        public ICollection<Rating> Ratings { get; set; }
-        public ICollection<Principal> Principals { get; set; }
+        //public virtual Rating Rating { get; set; }
+
+        //public virtual Rating Rato { get; set; }
+        public ICollection<Principal> Principal { get; set; }
     }
  }
