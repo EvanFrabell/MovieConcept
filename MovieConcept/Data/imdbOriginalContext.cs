@@ -23,6 +23,10 @@ namespace MovieConcept
 
         public virtual DbSet<Rating> Ratings { get; set; }
         public virtual DbSet<Principal> Principals { get; set; }
+        public virtual DbSet<Bio> Bios { get; set; }
+        public virtual DbSet<Specifications> Specificationss { get; set; }
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

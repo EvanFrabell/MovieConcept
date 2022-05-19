@@ -23,9 +23,10 @@ namespace MovieConcept.Model
         [Column("nconst")]
         public string Nconst { get; set; }
         public Bio Bio { get; set; }
+        
 
         [Column("category")]
-        public string Category { get; set; }
+        public string Role { get; set; }
 
 
 

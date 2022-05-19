@@ -28,10 +28,6 @@ namespace MovieConcept.Model
         
         [Column("genres")]
         public string Genres { get; set; }
-
-        //public virtual Rating Rating { get; set; }
-
-        //public virtual Rating Rato { get; set; }
-        public ICollection<Principal> Principal { get; set; }
+        public ICollection<Principal> Crew { get; set; }
     }
  }

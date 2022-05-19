@@ -10,6 +10,7 @@ namespace MovieConcept.Model
         [Column("nconst")]
         [StringLength(50)]
         public string NameId { get; set; }
+        public Specifications Specifications { get; set; }
 
         [Column("primaryName")]
         public string PrimaryName { get; set; }
